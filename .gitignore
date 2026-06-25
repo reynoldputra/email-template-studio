@@ -1,0 +1,13 @@
+node_modules
+coverage
+dist
+dist-server
+.playwright
+.playwright-cli
+test-results
+playwright-report
+.env
+.env.*
+!.env.example
+.DS_Store
+docs/superpowers

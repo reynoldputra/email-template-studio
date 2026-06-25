@@ -1,0 +1,1 @@
+<mjml><mj-body><mj-section><mj-column><mj-text>{{ message_title }}</mj-text><mj-text>{{ message_body }}</mj-text></mj-column></mj-section></mj-body></mjml>
