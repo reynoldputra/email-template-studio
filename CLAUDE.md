@@ -17,8 +17,14 @@ packages/core/        # Engine — config, fs discovery, variables, render, buil
 packages/cli/         # `email-template-studio` CLI — dev/build/watch/send/validate
 packages/components/  # Optional starter MJML blocks (private, not published V1)
 examples/basic/       # Reference project — used by studio as default project root
-docs/                 # architecture, testing, contributing, security, roadmap, migration
+docs/GUIDE.md         # Single merged doc: architecture, testing, security, roadmap, migration
+docs/screenshots/     # README/GUIDE screenshots
 ```
+
+User-facing docs:
+- `README.md` — product overview, quick start, layout, features
+- `CONTRIBUTING.md` — contributor workflow, conventions, commit format
+- `docs/GUIDE.md` — full architecture / testing / security / roadmap / migration reference
 
 ## Package Boundaries (strict)
 
@@ -65,7 +71,7 @@ Use `superpowers:test-driven-development` skill.
 
 ## Public-Safe Rules
 
-From `docs/security.md` and `docs/migration-from-internal.md`:
+From `docs/GUIDE.md` (Security + Migration sections):
 
 - No company names, real domains, real recipients, internal variable names.
 - Never commit `.env`. SMTP via env only.
@@ -106,8 +112,8 @@ No hosted SaaS, no WYSIWYG editor, no multi-user backend, no ESP integrations, n
 
 ## When Adding Features
 
-1. Check `docs/roadmap.md` and spec — does it fit V1 scope?
+1. Check `docs/GUIDE.md` (Roadmap + Non-Goals) — does it fit V1 scope?
 2. Brainstorm via `superpowers:brainstorming` if user-facing.
 3. Implement TDD task-by-task. Commit per task.
-4. Update relevant `docs/*.md` if architecture or commands change.
+4. Update `docs/GUIDE.md`, `README.md`, or `CONTRIBUTING.md` if architecture, commands, or workflow change.
 5. Add changeset for any `core`/`cli` public API change.
