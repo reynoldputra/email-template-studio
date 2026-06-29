@@ -10,4 +10,4 @@ playwright-report
 .env.*
 !.env.example
 .DS_Store
-docs/superpowers
+docs/superpowers/plans
