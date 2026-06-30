@@ -1,1 +1,24 @@
-<mj-attributes><mj-all font-family="Arial, sans-serif" /></mj-attributes>
+<mj-attributes>
+  <mj-all
+    font-family="'Inter', 'Segoe UI', Helvetica, Arial, sans-serif"
+    font-size="15px"
+    line-height="1.6"
+    color="#1a1d23"
+  />
+  <mj-button
+    background-color="#0b5e56"
+    border-radius="8px"
+    font-weight="600"
+    font-size="15px"
+    padding="14px 28px"
+  />
+  <mj-table
+    font-size="14px"
+    cellpadding="12"
+    border="1px solid #e5e7eb"
+  />
+  <mj-divider
+    border-color="#e5e7eb"
+    border-width="1px"
+  />
+</mj-attributes>

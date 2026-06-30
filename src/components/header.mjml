@@ -1,1 +1,7 @@
-<mj-section padding="24px"><mj-column><mj-text font-size="24px">Email Template Studio</mj-text></mj-column></mj-section>
+<mj-section background-color="#0b5e56" padding="24px 32px">
+  <mj-column>
+    <mj-text font-size="18px" font-weight="700" color="#ffffff" align="center" letter-spacing="-0.02em">
+      Email Template Studio
+    </mj-text>
+  </mj-column>
+</mj-section>

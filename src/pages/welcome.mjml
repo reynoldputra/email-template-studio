@@ -1,1 +1,53 @@
-<mjml><mj-head><mj-include path="../styles/base.mjml" /></mj-head><mj-body><mj-include path="../components/header.mjml" /><mj-section><mj-column><mj-text>Hello {{ first_name }}</mj-text></mj-column></mj-section><mj-include path="../components/footer.mjml" /></mj-body></mjml>
+<mjml>
+  <mj-head>
+    <mj-include path="../styles/base.mjml" />
+    <mj-preview>Welcome aboard, {{ first_name }}! Let's get started.</mj-preview>
+    <mj-title>Welcome to Email Template Studio</mj-title>
+  </mj-head>
+  <mj-body background-color="#f3f4f6">
+    <mj-include path="../components/header.mjml" />
+
+    <mj-section padding="32px">
+      <mj-column background-color="#ffffff" border-radius="8px" padding="32px">
+        <mj-text font-size="28px" font-weight="700" letter-spacing="-0.03em">
+          Welcome, {{ first_name }}!
+        </mj-text>
+        <mj-divider />
+        <mj-text font-size="15px" line-height="1.7" color="#4b5563">
+          We're thrilled to have you on board. Your account for <strong>{{ company_name }}</strong> is ready and you can start using our platform right away.
+        </mj-text>
+        <mj-text font-size="15px" line-height="1.7" color="#4b5563">
+          Here's what you can do next:
+        </mj-text>
+        <mj-spacer height="8px" />
+
+        <mj-table padding="0">
+          <tr>
+            <td style="width: 50%; padding: 16px; vertical-align: top;">
+              <p style="font-size: 14px; font-weight: 600; color: #0b5e56; margin: 0 0 4px;">01</p>
+              <p style="font-size: 15px; font-weight: 600; margin: 0 0 4px;">Explore the dashboard</p>
+              <p style="font-size: 13px; color: #6b7280; margin: 0;">Get familiar with your projects, recent activity, and team tools.</p>
+            </td>
+            <td style="width: 50%; padding: 16px; vertical-align: top;">
+              <p style="font-size: 14px; font-weight: 600; color: #0b5e56; margin: 0 0 4px;">02</p>
+              <p style="font-size: 15px; font-weight: 600; margin: 0 0 4px;">Set up your profile</p>
+              <p style="font-size: 13px; color: #6b7280; margin: 0;">Add your avatar, preferences, and notification settings.</p>
+            </td>
+          </tr>
+        </mj-table>
+
+        <mj-spacer height="16px" />
+
+        <mj-button href="{{ dashboard_url }}" align="center">
+          Go to Dashboard
+        </mj-button>
+
+        <mj-text font-size="13px" color="#9ca3af" align="center">
+          Or paste this link into your browser: {{ dashboard_url }}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-include path="../components/footer.mjml" />
+  </mj-body>
+</mjml>

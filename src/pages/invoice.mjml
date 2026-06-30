@@ -1,1 +1,60 @@
-<mjml><mj-body><mj-section><mj-column><mj-text>Invoice {{ invoice_number }}</mj-text><mj-text>Total {{ total_amount }}</mj-text></mj-column></mj-section></mj-body></mjml>
+<mjml>
+  <mj-head>
+    <mj-include path="../styles/base.mjml" />
+    <mj-preview>Invoice {{ invoice_number }} is ready for review</mj-preview>
+    <mj-title>Invoice {{ invoice_number }}</mj-title>
+  </mj-head>
+  <mj-body background-color="#f3f4f6">
+    <mj-include path="../components/header.mjml" />
+
+    <mj-section padding="32px">
+      <mj-column background-color="#ffffff" border-radius="8px" padding="32px">
+        <mj-text font-size="20px" font-weight="700" letter-spacing="-0.02em">
+          Invoice #{{ invoice_number }}
+        </mj-text>
+        <mj-text font-size="14px" color="#6b7280">
+          Issued: {{ issue_date }} &middot; Due: {{ due_date }}
+        </mj-text>
+        <mj-divider />
+
+        <mj-text font-size="15px" color="#4b5563">
+          Bill to: <strong>{{ bill_to }}</strong>
+        </mj-text>
+        <mj-spacer height="12px" />
+
+        <mj-table>
+          <tr style="background: #f9fafb; font-weight: 600;">
+            <td style="width: 60%;">Description</td>
+            <td style="width: 20%; text-align: right;">Qty</td>
+            <td style="width: 20%; text-align: right;">Amount</td>
+          </tr>
+          <tr>
+            <td>{{ line_item_1_desc }}</td>
+            <td style="text-align: right;">{{ line_item_1_qty }}</td>
+            <td style="text-align: right;">${{ line_item_1_amount }}</td>
+          </tr>
+          <tr>
+            <td>{{ line_item_2_desc }}</td>
+            <td style="text-align: right;">{{ line_item_2_qty }}</td>
+            <td style="text-align: right;">${{ line_item_2_amount }}</td>
+          </tr>
+        </mj-table>
+
+        <mj-spacer height="8px" />
+        <mj-divider />
+        <mj-spacer height="4px" />
+
+        <mj-text font-size="18px" font-weight="700" align="right">
+          Total: ${{ total_amount }}
+        </mj-text>
+
+        <mj-spacer height="16px" />
+        <mj-button href="{{ invoice_url }}" align="center">
+          View Full Invoice
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <mj-include path="../components/footer.mjml" />
+  </mj-body>
+</mjml>

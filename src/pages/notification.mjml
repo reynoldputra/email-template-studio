@@ -1,1 +1,39 @@
-<mjml><mj-body><mj-section><mj-column><mj-text>{{ message_title }}</mj-text><mj-text>{{ message_body }}</mj-text></mj-column></mj-section></mj-body></mjml>
+<mjml>
+  <mj-head>
+    <mj-include path="../styles/base.mjml" />
+    <mj-preview>{{ message_title }}</mj-preview>
+    <mj-title>{{ message_title }}</mj-title>
+  </mj-head>
+  <mj-body background-color="#f3f4f6">
+    <mj-include path="../components/header.mjml" />
+
+    <mj-section padding="0" background-color="#ffffff" border-radius="8px">
+      <!-- Colored title bar -->
+      <mj-column width="100%" background-color="#0b5e56" padding="20px 32px" border-radius="8px 8px 0 0">
+        <mj-text font-size="16px" font-weight="700" color="#ffffff" letter-spacing="-0.01em">
+          {{ message_title }}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0">
+      <mj-column background-color="#ffffff" padding="32px" border-radius="0 0 8px 8px">
+        <mj-text font-size="15px" line-height="1.7" color="#4b5563">
+          {{ message_body }}
+        </mj-text>
+        <mj-spacer height="12px" />
+        <mj-divider />
+        <mj-spacer height="12px" />
+        <mj-text font-size="13px" color="#6b7280">
+          If you have any questions about this notification, please contact your account manager or reply to this email.
+        </mj-text>
+        <mj-spacer height="12px" />
+        <mj-button href="{{ action_url }}" align="center">
+          {{ action_label }}
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <mj-include path="../components/footer.mjml" />
+  </mj-body>
+</mjml>

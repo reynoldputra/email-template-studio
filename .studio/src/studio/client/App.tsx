@@ -189,6 +189,12 @@ export const App = () => {
                   </p>
                 </div>
                 <span className={STATUS_CLASS[status]}>{STATUS_LABEL[status]}</span>
+                <span className="pipeline-badge">
+                  <span className={`pipeline-badge__dot${status === 'busy' ? ' is-rendering' : ''}`} />
+                  MJML
+                  <span className="pipeline-badge__arrow">→</span>
+                  HTML
+                </span>
               </div>
 
               <div className="preview-frame-shell">
