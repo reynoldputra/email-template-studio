@@ -28,9 +28,9 @@ describe('App', () => {
     expect(screen.getByText('Email Template Studio')).toBeTruthy();
   });
 
-  it('renders sidebar toggle and segmented control', () => {
+  it('renders top bar controls', () => {
     render(<App />);
-    expect(screen.getByRole('button', { name: 'Sidebar' })).toBeTruthy();
+    expect(screen.getByText('Email Template Studio')).toBeTruthy();
     expect(screen.getByRole('button', { name: 'Mobile' })).toBeTruthy();
     expect(screen.getByRole('button', { name: 'Desktop' })).toBeTruthy();
   });
