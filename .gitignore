@@ -1,7 +1,7 @@
 node_modules
 coverage
 dist
-dist-server
+.studio/dist
 .playwright
 .playwright-cli
 test-results

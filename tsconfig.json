@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outDir": ".studio/dist",
+    "rootDir": ".",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true
+  },
+  "include": [
+    ".studio/src/**/*.ts",
+    ".studio/src/**/*.tsx",
+    "*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".studio/src/**/*.test.ts",
+    ".studio/src/**/*.test.tsx"
+  ]
+}

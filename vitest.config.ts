@@ -1,14 +1,14 @@
-import path from 'node:path';
+import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
-  resolve: {
-    alias: {
-      '@email-template-studio/core': path.resolve(__dirname, 'packages/core/src/index.ts')
-    }
-  },
+  plugins: [react()],
   test: {
-    include: ['packages/**/*.test.ts', 'packages/**/*.test.tsx', 'apps/**/*.test.ts', 'apps/**/*.test.tsx'],
-    exclude: ['**/node_modules/**', 'apps/studio/e2e/**']
+    include: ['.studio/src/**/*.test.ts', '.studio/src/**/*.test.tsx'],
+    environment: 'node',
+    environmentMatchGlobs: [
+      ['.studio/src/studio/client/**', 'jsdom'],
+    ],
+    globals: false
   }
 });
