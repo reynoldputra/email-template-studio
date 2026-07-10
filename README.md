@@ -14,9 +14,10 @@ git clone https://github.com/reynoldputra/email-template-studio.git my-emails
 cd my-emails
 npm install
 npm run dev
+
+# Open http://127.0.0.1:3100.
 ```
 
-Open <http://127.0.0.1:3100>.
 
 ## Features
 
