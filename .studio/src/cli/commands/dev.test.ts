@@ -1,14 +1,25 @@
 import { describe, expect, it, vi } from 'vitest';
-import { runStudioServer } from '../start-studio-server.js';
+import { createServer } from 'vite';
+import { createStudioServer } from '../../studio/server/dev-server.js';
 import { runDev } from './dev.js';
 
-vi.mock('../start-studio-server.js', () => ({
-  runStudioServer: vi.fn().mockResolvedValue(undefined)
+vi.mock('../../studio/server/dev-server.js', () => ({
+  createStudioServer: vi.fn().mockReturnValue({
+    listen: (_port: number, _host: string, cb: () => void) => cb()
+  })
+}));
+
+vi.mock('vite', () => ({
+  createServer: vi.fn().mockResolvedValue({
+    listen: vi.fn().mockResolvedValue(undefined),
+    printUrls: vi.fn()
+  })
 }));
 
 describe('runDev', () => {
-  it('starts bundled studio server', async () => {
+  it('starts the API server and the Vite dev server', async () => {
     await runDev();
-    expect(runStudioServer).toHaveBeenCalledOnce();
+    expect(createStudioServer).toHaveBeenCalledOnce();
+    expect(createServer).toHaveBeenCalledOnce();
   });
 });
